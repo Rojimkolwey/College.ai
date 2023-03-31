@@ -1,0 +1,1513 @@
+<!-- Copyright (c) 2013 Plataformatec.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. -->
+<!DOCTYPE html>
+<html>
+<head><script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ01BG53FX"></script><script>   window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(js, new Date());    gtag(config, G-EZ01BG53FX); </script>
+    
+    <meta charset="utf-8">
+    <title>Error 500 at GET /trade-school/261719 - In SQLite3::ResultSet#read the column INFO returned a Nil but a String was expected.</title>
+    <meta name="viewport" content="width=device-width">
+    <style>/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:0.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}</style>
+    <style>
+    html, body, td, input {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 15px;
+        line-height: 1.6;
+        background: #fff;
+        color: #271708;
+    }
+
+    @media (max-width: 768px) {
+        html {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        html {
+            font-size: 13px;
+        }
+    }
+
+    button:focus,
+    summary:focus {
+        outline: 0;
+    }
+
+    summary {
+        cursor: pointer;
+    }
+
+    pre {
+        font-family: menlo, consolas, monospace;
+        overflow: auto;
+        max-width: 100%;
+    }
+
+    .top-details {
+        padding: 48px;
+        background: #f9f9fa;
+    }
+
+    .top-details,
+    .conn-info {
+        padding: 48px;
+    }
+
+
+    @media (max-width: 768px) {
+        .top-details,
+        .conn-info {
+            padding: 32px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .top-details,
+        .conn-info {
+            padding: 16px;
+        }
+    }
+
+    /*
+    * Exception logo
+    */
+
+    .exception-logo {
+        position: absolute;
+        right: 48px;
+        top: 48px;
+        width: 64px;
+    }
+
+    .exception-logo:before {
+        content: '';
+        display: block;
+        height: 64px;
+        width: 100%;
+        background-size: 100%;
+        background-image: url("data:image/png;base64,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");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    @media (max-width: 768px) {
+        .exception-logo {
+            right: 32px;
+            top: 6px;
+            width: 48px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .exception-logo {
+            display: none;
+        }
+    }
+
+    /*
+    * Exception info
+    */
+
+    /* Compensate for logo placement */
+    @media (min-width: 769px) {
+        .exception-info {
+            max-width: 90%;
+        }
+    }
+
+    .exception-info > .struct,
+    .exception-info > .title,
+    .exception-info > .detail {
+        margin: 0;
+        padding: 0;
+    }
+
+    .exception-info > .struct {
+        font-size: 1em;
+        font-weight: 700;
+        color: red;
+    }
+
+    .exception-info > .struct > small {
+        font-size: 1em;
+        color: #a0a0a0;
+        font-weight: 400;
+    }
+
+    .exception-info > .title {
+        font-size: 2.0736em;
+        line-height: 1.4;
+        font-weight: 300;
+        color: red;
+    }
+
+    @media (max-width: 768px) {
+        .exception-info > .title {
+            font-size: 1.7490062499999994em;
+        }
+
+        /* Compensate for logo placement */
+        .exception-info > .struct {
+            margin-right: 48px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .exception-info > .title {
+            font-size: 1.4641000000000004em;
+        }
+
+        .exception-info > .struct {
+            margin-right: 0;
+        }
+    }
+
+    .exception-info > .detail {
+        margin-top: 1.3em;
+        white-space: pre;
+    }
+
+    /*
+    * Code explorer
+    */
+
+    .code-explorer {
+        margin: 32px 0 0 0;
+        position: relative;
+        min-height: 249px;
+    }
+
+    @media (max-width: 768px) {
+        .code-explorer {
+            margin-top: 16px;
+        }
+    }
+
+    .code-explorer:after {
+        content: '';
+        display: table;
+        clear: both;
+        zoom: 1;
+    }
+
+    .code-explorer > .code-snippets {
+        width: 55%;
+        margin-left: 45%;
+        padding-left: 32px;
+        padding-top: 8px;
+    }
+
+    .code-explorer > .stack-trace {
+        float: right;
+        width: 55%;
+        padding-left: 32px;
+    }
+
+    /* Collapse to single-column */
+    @media (max-width: 960px) {
+        .code-explorer > .code-snippets {
+            float: none;
+            width: auto;
+            margin-bottom: 16px;
+        }
+
+        .code-explorer > .stack-trace {
+            float: none;
+            width: auto;
+            padding-left: 0;
+        }
+    }
+
+    /*
+    * Snippets
+    */
+
+    .code-snippets {
+    }
+
+    /*
+    * Frame info:
+    * Holds the code (code-block) and more
+    */
+
+    .frame-info {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 45%;
+        background: white;
+        box-shadow:
+            0 1px 3px rgba(80, 100, 140, .1),
+            0 8px 15px rgba(80, 100, 140, .05);
+    }
+
+    .frame-info > .meta,
+    .frame-info > .file {
+        padding: 12px 16px;
+        white-space: no-wrap;
+        font-size: 0.8333333333333334em;
+    }
+
+    @media (max-width: 768px) {
+      .frame-info {
+        position: static;
+      }
+    }
+
+    @media (max-width: 480px) {
+        .frame-info > .meta,
+        .frame-info > .file {
+            padding: 6px 16px;
+            font-size: 0.9090909090909091em;
+        }
+    }
+
+    .frame-info > .file > a {
+        text-decoration: none;
+        color: #271708;
+        font-weight: 700;
+    }
+
+    .frame-info > .code {
+        border-top: solid 1px #eee;
+        border-bottom: solid 1px #eee;
+    }
+
+    /* Hiding */
+    .frame-info {
+        display: none;
+    }
+
+    .frame-info.-active {
+        display: block;
+    }
+
+    .frame-info > details.meta {
+        padding: 0;
+    }
+
+    .frame-info > details.meta > summary {
+        padding: 12px 16px;
+    }
+
+    /*
+    * Frame details
+    */
+
+    .frame-summary.-short {
+        color: #a0a0a0;
+    }
+
+    .frame-summary > .app {
+        color: red;
+        font-weight: 700;
+    }
+
+    .frame-summary > .app:after {
+        content: '·';
+        margin: 0 .2em;
+    }
+
+    /*
+    * Code block:
+    * The `pre` that holds the code
+    */
+
+    .code-block {
+        margin: 0;
+        padding: 12px 0;
+        font-size: .8em;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .code-block > .line {
+        white-space: pre;
+        display: block;
+        padding: 0 16px;
+    }
+
+    /* Line highlight */
+    .code-block > .line.-highlight {
+        background-color: #e5e5e5;
+        -webkit-animation: line-highlight 750ms linear;
+        animation: line-highlight 750ms linear;
+    }
+
+    @-webkit-keyframes line-highlight {
+        0% { background-color: #e5e5e5; }
+        25% { background-color: #ffdc93; }
+        50% { background-color: #e5e5e5; }
+        75% { background-color: #ffdc93; }
+    }
+
+    @keyframes line-highlight {
+        0% { background-color: #e5e5e5; }
+        25% { background-color: #ffdc93; }
+        50% { background-color: #e5e5e5; }
+        75% { background-color: #ffdc93; }
+    }
+
+    .code-block > .line > .ln {
+        color: #a0a0a0;
+        margin-right: 1.5em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .code-block > .line > .code {
+        font-family: menlo, consolas, monospace;
+    }
+
+    /*
+    * Empty code
+    */
+
+    .code-block-empty {
+        text-align: center;
+        color: #a0a0a0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    /*
+    * Stack trace heading
+    */
+
+    .stack-trace-heading {
+        padding-top: 8px;
+        padding-left: 8px;
+        font-size: 0.8333333333333334em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .stack-trace-heading:after,
+    .stack-trace-heading-after {
+        content: '';
+        display: block;
+        clear: both;
+        zoom: 1;
+        border-bottom: solid 1px #eee;
+        padding-top: 12px;
+        margin-bottom: 16px;
+    }
+
+    .stack-trace-heading > h3 {
+        display: none;
+    }
+
+    #show-all-frame {
+        margin-right: .3em;
+    }
+
+    @media (max-width: 480px) {
+        .stack-trace-heading {
+            font-size: 0.9090909090909091em;
+        }
+    }
+
+    /*
+    * Stack trace item:
+    * The clickable line to inspect a stack trace
+    */
+
+    .stack-trace-item {
+        font-size: 0.8333333333333334em;
+        display: block;
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 4px 8px;
+        background: transparent;
+        cursor: pointer;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .stack-trace-item:hover,
+    .stack-trace-item:focus {
+        background-color: rgba(80, 100, 140, 0.05);
+    }
+
+    .stack-trace-item,
+    .stack-trace-item:active {
+        color: #271708;
+    }
+
+    .stack-trace-item:active {
+        background-color: rgba(80, 100, 140, 0.1);
+    }
+
+    .stack-trace-item.-active {
+        background-color: white;
+    }
+
+    /* Circle */
+    .stack-trace-item > .left:before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #a0a0a0;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    .stack-trace-item.-app > .left:before {
+        background: red;
+        opacity: 1;
+    }
+
+    .stack-trace-item.-app > .left > .app {
+        display: none;
+    }
+
+    .stack-trace-item.-unknown > .left {
+        float: left;
+        max-width: 100%;
+    }
+
+    .stack-trace-item > .left {
+        float: left;
+        max-width: 55%;
+    }
+
+    .stack-trace-item > .info {
+        color: #a0a0a0;
+        float: right;
+        max-width: 45%;
+    }
+
+    .stack-trace-item > .left,
+    .stack-trace-item > .info {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .stack-trace-item > .left > .filename > .line {
+        color: #a0a0a0;
+    }
+
+    /* App name */
+    .stack-trace-item > .left > .app {
+        color: #a0a0a0;
+    }
+
+    .stack-trace-item > .left > .app:after {
+        content: '·';
+        margin: 0 .2em;
+    }
+
+    /*
+    * Code as a blockquote:
+    * Like `pre` but with wrapping
+    */
+
+    .code-quote {
+        font-family: menlo, consolas, monospace;
+        font-size: 0.8333333333333334em;
+        margin: 0;
+        overflow: auto;
+        max-width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+    .code-quote.-padded {
+        padding: 0 16px 16px 16px;
+    }
+
+    /*
+    * Conn info
+    */
+
+    .conn-info {
+        border-top: solid 1px #eee;
+    }
+
+    /*
+    * Conn details
+    */
+
+    .conn-details {
+    }
+
+    .conn-details + .conn-details {
+        margin-top: 16px;
+    }
+
+    .conn-details > summary {
+    }
+
+    .conn-details > dl {
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 4px 0;
+        border-bottom: solid 1px #eee;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .conn-details > dl:first-of-type {
+        margin-top: 16px;
+        border-top: solid 1px #eee;
+    }
+
+    /* Term */
+    .conn-details > dl > dt {
+        width: 20%;
+        float: left;
+        font-size: 0.8333333333333334em;
+        color: #a0a0a0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        top: -1px; /* Compensate for font metrics */
+    }
+
+    /* Definition */
+    .conn-details > dl > dd {
+        width: 80%;
+        float: left;
+    }
+
+    @media (max-width: 480px) {
+        .conn-details > dl > dt {
+            font-size: 0.9090909090909091em;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .code-explorer > .code-snippets {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .frame-info {
+            width: 100%;
+            top: -300px;
+        }
+    }
+
+    .code-snippets [type="radio"] {
+        opacity: 0;
+        display:none;
+    }
+
+    .frame-info {
+        display: none;
+    }
+
+    .code-snippets [type="radio"]:checked ~ label ~ .frame-info {
+        display: block;
+    }
+
+    #show-all-frames[type="checkbox"] ~ label ~ div.code-snippets-wrapper > label.stack-trace-item.-all,
+    #show-all-frames[type="checkbox"] ~ label ~ div.code-snippets-wrapper > label.stack-trace-item.-unknown
+    {
+        display: none;
+    }
+
+    #show-all-frames[type="checkbox"]:checked ~ label ~ div.code-snippets-wrapper > label.stack-trace-item.-all,
+    #show-all-frames[type="checkbox"]:checked ~ label ~ div.code-snippets-wrapper > label.stack-trace-item.-unknown
+    {
+        display: block;
+    }
+
+    .frame-info {
+        clear: right;
+    }
+
+    .code-snippets-wrapper label.stack-trace-item.-all{
+        display: none;
+    }
+
+    .code-snippets input[type="checkbox"]:checked .code-snippets-wrapper label.stack-trace-item.-all{
+        display: block;
+    }
+
+    .code-snippets-wrapper input[type="radio"]:checked ~ label{
+        background-color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="top-details">
+        <a class="exception-logo" href="https://kemalcr.com/" target="_blank"></a>
+
+        <header class="exception-info" flow-id="exception-title">
+            <h5 class="struct">
+                Error 500
+                <small>at GET /trade-school/261719</small>
+            </h5>
+            <h1 class="title">In SQLite3::ResultSet#read the column INFO returned a Nil but a String was expected.</h1>
+            <details class="meta">
+                <summary class="frame-summary" flow-id="see-raw-error-message">
+                See raw message
+                </summary>
+                <pre class="code code-block" flow-id="raw-error-message">
+                        <span class="line"><span class="code">In SQLite3::ResultSet#read the column INFO returned a Nil but a String was expected.</span>
+                </pre>
+            </details>
+        </header>
+        
+        <div class="code-explorer">
+            <div class="code-snippets" flow-id="code-frames">
+                
+                <input type="checkbox" role="show-all-toggle" id="show-all-frames" flow-id="show-all-frames">
+                <label class="stack-trace-heading" for="show-all-frames">Show all frames</label>
+
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace0" name="stack-trace-list" checked >
+                    <label for="trace0" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">db</span>
+                          <span class="filename">
+                              lib/db/src/db/result_set.cr<span class="line">:89</span>
+                          </span>
+                      </span>
+
+                          <span class="info">result_set.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/db/src/db/result_set.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">84</span><span class="code">      col_index = next_column_index</span></span>
+                            <span class="line "><span class="ln">85</span><span class="code">      value = read</span></span>
+                            <span class="line "><span class="ln">86</span><span class="code">      if value.is_a?(T)</span></span>
+                            <span class="line "><span class="ln">87</span><span class="code">        value</span></span>
+                            <span class="line "><span class="ln">88</span><span class="code">      else</span></span>
+                            <span class="line -highlight"><span class="ln">89</span><span class="code">        raise DB::ColumnTypeMismatchError.new(</span></span>
+                            <span class="line "><span class="ln">90</span><span class="code">          context: "#{self.class}#read",</span></span>
+                            <span class="line "><span class="ln">91</span><span class="code">          column_index: col_index,</span></span>
+                            <span class="line "><span class="ln">92</span><span class="code">          column_name: column_name(col_index),</span></span>
+                            <span class="line "><span class="ln">93</span><span class="code">          column_type: value.class.to_s,</span></span>
+                            <span class="line "><span class="ln">94</span><span class="code">          expected_type: T.to_s</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">db</span>
+                                  read
+                              </summary>
+                              <blockquote class="code-quote -padded">raise DB::ColumnTypeMismatchError.new(</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace1" name="stack-trace-list"  >
+                    <label for="trace1" class="stack-trace-item -app">
+                      <span class="left">
+                          <span class="app">app</span>
+                          <span class="filename">
+                              src/ipeds22.cr<span class="line">:687</span>
+                          </span>
+                      </span>
+
+                          <span class="info">ipeds22.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">src/ipeds22.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">682</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">683</span><span class="code">  # INFO</span></span>
+                            <span class="line "><span class="ln">684</span><span class="code">  DB.open "sqlite3://./IPEDS.db" do |db|</span></span>
+                            <span class="line "><span class="ln">685</span><span class="code">    db.query "SELECT INFO, ADMISSION_INFO FROM CombinedInfo WHERE UNITID = #{unitid}" do |rs|</span></span>
+                            <span class="line "><span class="ln">686</span><span class="code">      rs.each do</span></span>
+                            <span class="line -highlight"><span class="ln">687</span><span class="code">        info = rs.read(String)</span></span>
+                            <span class="line "><span class="ln">688</span><span class="code">        admission_info = rs.read(String)</span></span>
+                            <span class="line "><span class="ln">689</span><span class="code">      end</span></span>
+                            <span class="line "><span class="ln">690</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">691</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">692</span><span class="code">    # DEGREES</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">app</span>
+                                  -&gt;
+                              </summary>
+                              <blockquote class="code-quote -padded">info = rs.read(String)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace2" name="stack-trace-list"  >
+                    <label for="trace2" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/route.cr<span class="line">:12</span>
+                          </span>
+                      </span>
+
+                          <span class="info">route.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/route.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">7</span><span class="code">    getter method, path, handler</span></span>
+                            <span class="line "><span class="ln">8</span><span class="code">    @handler : HTTP::Server::Context -&gt; String</span></span>
+                            <span class="line "><span class="ln">9</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">10</span><span class="code">    def initialize(@method : String, @path : String, &amp;handler : HTTP::Server::Context -&gt; _)</span></span>
+                            <span class="line "><span class="ln">11</span><span class="code">      @handler = -&gt;(context : HTTP::Server::Context) do</span></span>
+                            <span class="line -highlight"><span class="ln">12</span><span class="code">        output = handler.call(context)</span></span>
+                            <span class="line "><span class="ln">13</span><span class="code">        output.is_a?(String) ? output : ""</span></span>
+                            <span class="line "><span class="ln">14</span><span class="code">      end</span></span>
+                            <span class="line "><span class="ln">15</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">16</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">17</span><span class="code">end</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  -&gt;
+                              </summary>
+                              <blockquote class="code-quote -padded">output = handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace3" name="stack-trace-list"  >
+                    <label for="trace3" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/route_handler.cr<span class="line">:49</span>
+                          </span>
+                      </span>
+
+                          <span class="info">route_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/route_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">44</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">45</span><span class="code">    # Processes the route if it's a match. Otherwise renders 404.</span></span>
+                            <span class="line "><span class="ln">46</span><span class="code">    private def process_request(context)</span></span>
+                            <span class="line "><span class="ln">47</span><span class="code">      raise Kemal::Exceptions::RouteNotFound.new(context) unless context.route_found?</span></span>
+                            <span class="line "><span class="ln">48</span><span class="code">      return if context.response.closed?</span></span>
+                            <span class="line -highlight"><span class="ln">49</span><span class="code">      content = context.route.handler.call(context)</span></span>
+                            <span class="line "><span class="ln">50</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">51</span><span class="code">      if !Kemal.config.error_handlers.empty? &amp;&amp; Kemal.config.error_handlers.has_key?(context.response.status_code)</span></span>
+                            <span class="line "><span class="ln">52</span><span class="code">        raise Kemal::Exceptions::CustomException.new(context)</span></span>
+                            <span class="line "><span class="ln">53</span><span class="code">      end</span></span>
+                            <span class="line "><span class="ln">54</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  process_request
+                              </summary>
+                              <blockquote class="code-quote -padded">content = context.route.handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace4" name="stack-trace-list"  >
+                    <label for="trace4" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/route_handler.cr<span class="line">:17</span>
+                          </span>
+                      </span>
+
+                          <span class="info">route_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/route_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">12</span><span class="code">      @routes = Radix::Tree(Route).new</span></span>
+                            <span class="line "><span class="ln">13</span><span class="code">      @cached_routes = Hash(String, Radix::Result(Route)).new</span></span>
+                            <span class="line "><span class="ln">14</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">15</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">16</span><span class="code">    def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line -highlight"><span class="ln">17</span><span class="code">      process_request(context)</span></span>
+                            <span class="line "><span class="ln">18</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">19</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">20</span><span class="code">    # Adds a given route to routing tree. As an exception each `GET` route additionaly defines</span></span>
+                            <span class="line "><span class="ln">21</span><span class="code">    # a corresponding `HEAD` route.</span></span>
+                            <span class="line "><span class="ln">22</span><span class="code">    def add_route(method : String, path : String, &amp;handler : HTTP::Server::Context -&gt; _)</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">process_request(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace5" name="stack-trace-list"  >
+                    <label for="trace5" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr<span class="line">:28</span>
+                          </span>
+                      </span>
+
+                          <span class="info">handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">23</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">24</span><span class="code">  abstract def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">25</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">26</span><span class="code">  def call_next(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">27</span><span class="code">    if next_handler = @next</span></span>
+                            <span class="line -highlight"><span class="ln">28</span><span class="code">      next_handler.call(context)</span></span>
+                            <span class="line "><span class="ln">29</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">30</span><span class="code">      context.response.respond_with_status(:not_found)</span></span>
+                            <span class="line "><span class="ln">31</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">32</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">33</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call_next
+                              </summary>
+                              <blockquote class="code-quote -padded">next_handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace6" name="stack-trace-list"  >
+                    <label for="trace6" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/websocket_handler.cr<span class="line">:13</span>
+                          </span>
+                      </span>
+
+                          <span class="info">websocket_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/websocket_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">8</span><span class="code">    def initialize</span></span>
+                            <span class="line "><span class="ln">9</span><span class="code">      @routes = Radix::Tree(WebSocket).new</span></span>
+                            <span class="line "><span class="ln">10</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">11</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">12</span><span class="code">    def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line -highlight"><span class="ln">13</span><span class="code">      return call_next(context) unless context.ws_route_found? &amp;&amp; websocket_upgrade_request?(context)</span></span>
+                            <span class="line "><span class="ln">14</span><span class="code">      context.websocket.call(context)</span></span>
+                            <span class="line "><span class="ln">15</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">16</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">17</span><span class="code">    def lookup_ws_route(path : String)</span></span>
+                            <span class="line "><span class="ln">18</span><span class="code">      @routes.find "/ws" + path</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">return call_next(context) unless context.ws_route_found? &amp;&amp; websocket_upgrade_request?(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace7" name="stack-trace-list"  >
+                    <label for="trace7" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr<span class="line">:28</span>
+                          </span>
+                      </span>
+
+                          <span class="info">handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">23</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">24</span><span class="code">  abstract def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">25</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">26</span><span class="code">  def call_next(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">27</span><span class="code">    if next_handler = @next</span></span>
+                            <span class="line -highlight"><span class="ln">28</span><span class="code">      next_handler.call(context)</span></span>
+                            <span class="line "><span class="ln">29</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">30</span><span class="code">      context.response.respond_with_status(:not_found)</span></span>
+                            <span class="line "><span class="ln">31</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">32</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">33</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call_next
+                              </summary>
+                              <blockquote class="code-quote -padded">next_handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace8" name="stack-trace-list"  >
+                    <label for="trace8" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/static_file_handler.cr<span class="line">:75</span>
+                          </span>
+                      </span>
+
+                          <span class="info">static_file_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/static_file_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">70</span><span class="code">          context.response.status_code = 304</span></span>
+                            <span class="line "><span class="ln">71</span><span class="code">          return</span></span>
+                            <span class="line "><span class="ln">72</span><span class="code">        end</span></span>
+                            <span class="line "><span class="ln">73</span><span class="code">        send_file(context, file_path)</span></span>
+                            <span class="line "><span class="ln">74</span><span class="code">      else</span></span>
+                            <span class="line -highlight"><span class="ln">75</span><span class="code">        call_next(context)</span></span>
+                            <span class="line "><span class="ln">76</span><span class="code">      end</span></span>
+                            <span class="line "><span class="ln">77</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">78</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">79</span><span class="code">    private def modification_time(file_path)</span></span>
+                            <span class="line "><span class="ln">80</span><span class="code">      File.info(file_path).modification_time</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">call_next(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace9" name="stack-trace-list"  >
+                    <label for="trace9" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr<span class="line">:28</span>
+                          </span>
+                      </span>
+
+                          <span class="info">handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">23</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">24</span><span class="code">  abstract def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">25</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">26</span><span class="code">  def call_next(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">27</span><span class="code">    if next_handler = @next</span></span>
+                            <span class="line -highlight"><span class="ln">28</span><span class="code">      next_handler.call(context)</span></span>
+                            <span class="line "><span class="ln">29</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">30</span><span class="code">      context.response.respond_with_status(:not_found)</span></span>
+                            <span class="line "><span class="ln">31</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">32</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">33</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call_next
+                              </summary>
+                              <blockquote class="code-quote -padded">next_handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace10" name="stack-trace-list"  >
+                    <label for="trace10" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/exception_handler.cr<span class="line">:8</span>
+                          </span>
+                      </span>
+
+                          <span class="info">exception_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/exception_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">3</span><span class="code">  class ExceptionHandler</span></span>
+                            <span class="line "><span class="ln">4</span><span class="code">    include HTTP::Handler</span></span>
+                            <span class="line "><span class="ln">5</span><span class="code">    INSTANCE = new</span></span>
+                            <span class="line "><span class="ln">6</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">7</span><span class="code">    def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line -highlight"><span class="ln">8</span><span class="code">      call_next(context)</span></span>
+                            <span class="line "><span class="ln">9</span><span class="code">    rescue ex : Kemal::Exceptions::RouteNotFound</span></span>
+                            <span class="line "><span class="ln">10</span><span class="code">      call_exception_with_status_code(context, ex, 404)</span></span>
+                            <span class="line "><span class="ln">11</span><span class="code">    rescue ex : Kemal::Exceptions::CustomException</span></span>
+                            <span class="line "><span class="ln">12</span><span class="code">      call_exception_with_status_code(context, ex, context.response.status_code)</span></span>
+                            <span class="line "><span class="ln">13</span><span class="code">    rescue ex : Exception</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">call_next(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace11" name="stack-trace-list"  >
+                    <label for="trace11" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr<span class="line">:28</span>
+                          </span>
+                      </span>
+
+                          <span class="info">handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">23</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">24</span><span class="code">  abstract def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">25</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">26</span><span class="code">  def call_next(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">27</span><span class="code">    if next_handler = @next</span></span>
+                            <span class="line -highlight"><span class="ln">28</span><span class="code">      next_handler.call(context)</span></span>
+                            <span class="line "><span class="ln">29</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">30</span><span class="code">      context.response.respond_with_status(:not_found)</span></span>
+                            <span class="line "><span class="ln">31</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">32</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">33</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call_next
+                              </summary>
+                              <blockquote class="code-quote -padded">next_handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace12" name="stack-trace-list"  >
+                    <label for="trace12" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/time.cr<span class="line">:357</span>
+                          </span>
+                      </span>
+
+                          <span class="info">time.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/time.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">352</span><span class="code">  # elapsed_time # =&gt; 20.milliseconds (approximately)</span></span>
+                            <span class="line "><span class="ln">353</span><span class="code">  # ```</span></span>
+                            <span class="line "><span class="ln">354</span><span class="code">  def self.measure(&amp;block : -&gt;) : Time::Span</span></span>
+                            <span class="line "><span class="ln">355</span><span class="code">    start = monotonic</span></span>
+                            <span class="line "><span class="ln">356</span><span class="code">    yield</span></span>
+                            <span class="line -highlight"><span class="ln">357</span><span class="code">    monotonic - start</span></span>
+                            <span class="line "><span class="ln">358</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">359</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">360</span><span class="code">  # Creates a new `Time` instance representing the current time from the</span></span>
+                            <span class="line "><span class="ln">361</span><span class="code">  # system clock observed in *location* (defaults to local time zone).</span></span>
+                            <span class="line "><span class="ln">362</span><span class="code">  def self.local(location : Location = Location.local) : Time</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">monotonic - start</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace13" name="stack-trace-list"  >
+                    <label for="trace13" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr<span class="line">:28</span>
+                          </span>
+                      </span>
+
+                          <span class="info">handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">23</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">24</span><span class="code">  abstract def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">25</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">26</span><span class="code">  def call_next(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">27</span><span class="code">    if next_handler = @next</span></span>
+                            <span class="line -highlight"><span class="ln">28</span><span class="code">      next_handler.call(context)</span></span>
+                            <span class="line "><span class="ln">29</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">30</span><span class="code">      context.response.respond_with_status(:not_found)</span></span>
+                            <span class="line "><span class="ln">31</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">32</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">33</span><span class="code"></span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  call_next
+                              </summary>
+                              <blockquote class="code-quote -padded">next_handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace14" name="stack-trace-list"  >
+                    <label for="trace14" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">kemal</span>
+                          <span class="filename">
+                              lib/kemal/src/kemal/init_handler.cr<span class="line">:12</span>
+                          </span>
+                      </span>
+
+                          <span class="info">init_handler.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">lib/kemal/src/kemal/init_handler.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">7</span><span class="code">    INSTANCE = new</span></span>
+                            <span class="line "><span class="ln">8</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">9</span><span class="code">    def call(context : HTTP::Server::Context)</span></span>
+                            <span class="line "><span class="ln">10</span><span class="code">      context.response.headers.add "X-Powered-By", "Kemal" if Kemal.config.powered_by_header</span></span>
+                            <span class="line "><span class="ln">11</span><span class="code">      context.response.content_type = "text/html" unless context.response.headers.has_key?("Content-Type")</span></span>
+                            <span class="line -highlight"><span class="ln">12</span><span class="code">      call_next context</span></span>
+                            <span class="line "><span class="ln">13</span><span class="code">    end</span></span>
+                            <span class="line "><span class="ln">14</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">15</span><span class="code">end</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">kemal</span>
+                                  call
+                              </summary>
+                              <blockquote class="code-quote -padded">call_next context</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace15" name="stack-trace-list"  >
+                    <label for="trace15" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/request_processor.cr<span class="line">:51</span>
+                          </span>
+                      </span>
+
+                          <span class="info">request_processor.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server/request_processor.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">46</span><span class="code">        response.version = request.version</span></span>
+                            <span class="line "><span class="ln">47</span><span class="code">        response.headers["Connection"] = "keep-alive" if request.keep_alive?</span></span>
+                            <span class="line "><span class="ln">48</span><span class="code">        context = Context.new(request, response)</span></span>
+                            <span class="line "><span class="ln">49</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">50</span><span class="code">        Log.with_context do</span></span>
+                            <span class="line -highlight"><span class="ln">51</span><span class="code">          @handler.call(context)</span></span>
+                            <span class="line "><span class="ln">52</span><span class="code">        rescue ex : ClientError</span></span>
+                            <span class="line "><span class="ln">53</span><span class="code">          Log.debug(exception: ex.cause) { ex.message }</span></span>
+                            <span class="line "><span class="ln">54</span><span class="code">        rescue ex</span></span>
+                            <span class="line "><span class="ln">55</span><span class="code">          Log.error(exception: ex) { "Unhandled exception on HTTP::Handler" }</span></span>
+                            <span class="line "><span class="ln">56</span><span class="code">          unless response.closed?</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  process
+                              </summary>
+                              <blockquote class="code-quote -padded">@handler.call(context)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace16" name="stack-trace-list"  >
+                    <label for="trace16" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server.cr<span class="line">:515</span>
+                          </span>
+                      </span>
+
+                          <span class="info">server.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">510</span><span class="code">          return</span></span>
+                            <span class="line "><span class="ln">511</span><span class="code">        end</span></span>
+                            <span class="line "><span class="ln">512</span><span class="code">      end</span></span>
+                            <span class="line "><span class="ln">513</span><span class="code">    {% end %}</span></span>
+                            <span class="line "><span class="ln">514</span><span class="code"></span></span>
+                            <span class="line -highlight"><span class="ln">515</span><span class="code">    @processor.process(io, io)</span></span>
+                            <span class="line "><span class="ln">516</span><span class="code">  ensure</span></span>
+                            <span class="line "><span class="ln">517</span><span class="code">    {% begin %}</span></span>
+                            <span class="line "><span class="ln">518</span><span class="code">      begin</span></span>
+                            <span class="line "><span class="ln">519</span><span class="code">        io.close</span></span>
+                            <span class="line "><span class="ln">520</span><span class="code">      rescue IO::Error{% unless flag?(:without_openssl) %} | OpenSSL::SSL::Error{% end %}</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  handle_client
+                              </summary>
+                              <blockquote class="code-quote -padded">@processor.process(io, io)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace17" name="stack-trace-list"  >
+                    <label for="trace17" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server.cr<span class="line">:468</span>
+                          </span>
+                      </span>
+
+                          <span class="info">server.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/http/server.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">463</span><span class="code">          end</span></span>
+                            <span class="line "><span class="ln">464</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">465</span><span class="code">          if io</span></span>
+                            <span class="line "><span class="ln">466</span><span class="code">            # a non nillable version of the closured io</span></span>
+                            <span class="line "><span class="ln">467</span><span class="code">            _io = io</span></span>
+                            <span class="line -highlight"><span class="ln">468</span><span class="code">            spawn handle_client(_io)</span></span>
+                            <span class="line "><span class="ln">469</span><span class="code">          else</span></span>
+                            <span class="line "><span class="ln">470</span><span class="code">            break</span></span>
+                            <span class="line "><span class="ln">471</span><span class="code">          end</span></span>
+                            <span class="line "><span class="ln">472</span><span class="code">        end</span></span>
+                            <span class="line "><span class="ln">473</span><span class="code">      ensure</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  -&gt;
+                              </summary>
+                              <blockquote class="code-quote -padded">spawn handle_client(_io)</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace18" name="stack-trace-list"  >
+                    <label for="trace18" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/fiber.cr<span class="line">:146</span>
+                          </span>
+                      </span>
+
+                          <span class="info">fiber.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/fiber.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">141</span><span class="code">  end</span></span>
+                            <span class="line "><span class="ln">142</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">143</span><span class="code">  # :nodoc:</span></span>
+                            <span class="line "><span class="ln">144</span><span class="code">  def run</span></span>
+                            <span class="line "><span class="ln">145</span><span class="code">    GC.unlock_read</span></span>
+                            <span class="line -highlight"><span class="ln">146</span><span class="code">    @proc.call</span></span>
+                            <span class="line "><span class="ln">147</span><span class="code">  rescue ex</span></span>
+                            <span class="line "><span class="ln">148</span><span class="code">    if name = @name</span></span>
+                            <span class="line "><span class="ln">149</span><span class="code">      STDERR.print "Unhandled exception in spawn(name: #{name}): "</span></span>
+                            <span class="line "><span class="ln">150</span><span class="code">    else</span></span>
+                            <span class="line "><span class="ln">151</span><span class="code">      STDERR.print "Unhandled exception in spawn: "</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  run
+                              </summary>
+                              <blockquote class="code-quote -padded">@proc.call</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+                  <div class="code-snippets-wrapper">
+                    <input type="radio" id="trace19" name="stack-trace-list"  >
+                    <label for="trace19" class="stack-trace-item -all">
+                      <span class="left">
+                          <span class="app">crystal</span>
+                          <span class="filename">
+                              /opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/fiber.cr<span class="line">:98</span>
+                          </span>
+                      </span>
+
+                          <span class="info">fiber.cr</span>
+                    </label>
+                    <div class="frame-info" role="stack-trace-details">
+                          <div class="file">
+                              <a href="#">/opt/homebrew/Cellar/crystal/1.6.2/share/crystal/src/fiber.cr</a>
+                          </div>
+                        <pre class="code code-block">
+                            <span class="line "><span class="ln">93</span><span class="code">        {Pointer(Void).null, Pointer(Void).null}</span></span>
+                            <span class="line "><span class="ln">94</span><span class="code">      {% else %}</span></span>
+                            <span class="line "><span class="ln">95</span><span class="code">        Fiber.stack_pool.checkout</span></span>
+                            <span class="line "><span class="ln">96</span><span class="code">      {% end %}</span></span>
+                            <span class="line "><span class="ln">97</span><span class="code"></span></span>
+                            <span class="line -highlight"><span class="ln">98</span><span class="code">    fiber_main = -&gt;(f : Fiber) { f.run }</span></span>
+                            <span class="line "><span class="ln">99</span><span class="code"></span></span>
+                            <span class="line "><span class="ln">100</span><span class="code">    # FIXME: This line shouldn't be necessary (#7975)</span></span>
+                            <span class="line "><span class="ln">101</span><span class="code">    stack_ptr = nil</span></span>
+                            <span class="line "><span class="ln">102</span><span class="code">    {% if flag?(:win32) %}</span></span>
+                            <span class="line "><span class="ln">103</span><span class="code">      # align stack bottom to 16 bytes</span></span>
+                        </pre>
+                          <details class="meta">
+                              <summary class="frame-summary" flow-id="code-frame-summary">
+                                  <span class="app">crystal</span>
+                                  -&gt;
+                              </summary>
+                              <blockquote class="code-quote -padded">fiber_main = -&gt;(f : Fiber) { f.run }</blockquote>
+                          </details>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="conn-info">
+        
+
+        <details class="conn-details">
+            <summary>Request info</summary>
+
+            <dl>
+                <dt>URI:</dt>
+                <dd class="code-quote">localhost:3000/trade-school/261719</dd>
+            </dl>
+
+            <dl>
+                <dt>Query string:</dt>
+                <dd class="code-quote"></dd>
+            </dl>
+        </details>
+
+        <details class="conn-details">
+            <summary>Headers</summary>
+            
+            <dl>
+                <dt>Connection</dt>
+                <dd class="code-quote">[&quot;keep-alive&quot;]</dd>
+            </dl>
+            
+            <dl>
+                <dt>X-Powered-By</dt>
+                <dd class="code-quote">[&quot;Kemal&quot;]</dd>
+            </dl>
+            
+            <dl>
+                <dt>Content-Type</dt>
+                <dd class="code-quote">[&quot;text/html&quot;]</dd>
+            </dl>
+            
+        </details>
+
+        
+    </div>
+
+    
+</body>
+</html>

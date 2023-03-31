@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ01BG53FX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EZ01BG53FX');
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>college.ai | School Search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon icon -->
+    <link rel="icon" href="img/favicon.png">
+
+    <!-- All CSS Files Here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/et-line-fonts.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+    <style>
+        html {
+            font-size: 100%;
+        }
+        .flex-container {
+            display: flex;
+            background-color: white;
+            height: 50px;
+            width: 600px;
+
+        }
+
+        .flex-container > div {
+            background-color: white;
+            margin: 5px;
+            padding: 5px;
+            font-size: 10px;
+            height: 50px;
+        }
+       
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/satellite-min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/app.css">
+
+
+    <style>
+        
+
+        @media (min-width: 1200px) {
+            .basic-contact-area .container {
+                width: 1270px;
+            }
+        }
+        .column1 {
+            float: left;
+            width: 40%;
+            /* margin-left: -50px; */
+        }
+
+        .column2 {
+            float: left;
+            width: 57%;
+            font-size: 1.2em;
+        }
+
+        /* Clear floats after the columns */
+        .ais-Panel-footer, .ais-Panel-header
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .basic-breadcrumb h1 {
+            color: white;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        input[type=checkbox], input[type=radio] {
+            margin: 0 0.5rem 0 0;
+        }
+        .ais-Hits-item a {
+            color: -webkit-link;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+        .basic-contact-area {
+            font-family: sans-serif !important;
+        }
+        .ais-Hits-item > div {
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<!-- PRELOADER -->
+<div class="page-loader">
+    <div class="loader">Loading...</div>
+</div>
+<!-- /PRELOADER -->
+<!-- header start -->
+<header id="sticky-header">
+    <div class="header-area">
+        <div class="container sm-100">
+            <div class="row">
+                <div class="col-md-3 col-sm-2">
+                    <div class="logo text-upper" style="width: 400px;padding-top: 20px;padding-bottom: 10px; margin-left: -10px;">
+                        <a href="index.html">
+                            <img src="img/college_ai.png">
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-9 col-sm-10">
+
+
+                    <div class="menu-area hidden-xs" style="margin-top: 40px;">
+                        <nav>
+                            <ul class="basic-menu clearfix">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <li><a href="#">Scholarships</a></li>
+                                <li><a href="../colleges.html">Colleges</a></li>
+                                <li><a href="../community-colleges.html">Community Colleges</a></li>
+                                <li><a href="../trade-schools.html">Trade Schools</a></li>
+                            </ul>
+                        </nav>
+
+
+                    </div>
+                    <!-- basic-mobile-menu -->
+                    <div class="basic-mobile-menu visible-xs">
+                        <nav id="mobile-nav">
+
+                            <ul>
+ <ul class="basic-menu clearfix">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="../about.html">About</a></li>
+                                <li><a href="#">Scholarships</a></li>
+                                <li><a href="../colleges.html">Colleges</a></li>
+                                <li><a href="../community-colleges.html">Community Colleges</a></li>
+                                <li><a href="../trade-schools.html">Trade Schools</a></li>
+                            </ul>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<div style="text-align: center;">
+<br><br>
+<p style=" font-size: 24px;">	To get a sense of how this search works, try entering "Texas biology" into the search field and hit return.</p>
+<div>	
+
+<div>
+    <div class="basic-contact-area pt-50 pb-40">
+        <div class="container">
+            <div class="search-panel">
+                <div class="search-panel__filters column1">
+                    <div id="dynamic-widgets"></div>
+                </div>
+
+                <div class="search-panel__results column2">
+                    <div id="searchbox"></div>
+                    <div id="hits"></div>
+                    <div id="pagination"></div>
+
+                </div>
+				
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+</div>
+<!-- basic-contact-area end -->
+</div>
+</div>
+
+
+<!-- footer start -->
+<footer>
+    <div class="basic-footer text-center ptb-90">
+        <div class="container">
+            <div class="footer-logo mb-30">
+                <a href="index.html">
+                    <img src="img/college_ai.png" width=300px;>
+                </a>
+            </div>
+            <!-- <div class="social-icon">
+                <a href="#"><i class="ion-social-facebook"></i></a>
+                <a href="#"><i class="ion-social-googleplus"></i></a>
+                <a href="#"><i class="ion-social-instagram"></i></a>
+                <a href="#"><i class="ion-social-dribbble"></i></a>
+            </div> -->
+            <div class="footer-menu mt-30">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">about</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="../colleges.html">Colleges</a></li>
+                        <li><a href="../community-colleges.html">Community Colleges</a></li>
+                        <li><a href="../trade-schools.html">Trade Schools</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="copyright mt-20">
+                <p>copyright © 2022 college.ai all rights reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+
+
+<!-- All js plugins here -->
+<script src="js/vendor/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.meanmenu.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.10.5/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.49.1"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
