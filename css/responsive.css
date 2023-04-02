@@ -10,6 +10,13 @@
     line-height: 3.5rem;
     font-size: large;
   }
+  div a[style="color: blue;"] {
+    line-height: 3.8rem;
+    margin-right: 0.9rem;
+    font-size: 2rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
 }
 
 /*--------- TSmall devices Tablets ------------*/
@@ -26,6 +33,14 @@
     padding: 0.9rem;
     line-height: 3.5rem;
     font-size: large;
+  }
+  div a[style="color: blue;"] {
+    line-height: 3.8rem;
+    margin-right: 0.9rem;
+
+    font-size: 2rem;
+    font-family: "Open Sans";
+    font-weight: 400;
   }
   .basic-mobile-menu {
     display: none !important;
@@ -74,6 +89,22 @@
   }
   div[style="font-size: .8em;"] a {
     padding: 0.9rem;
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+
+    font-size: large;
+  }
+  div a[style="color: blue;"] {
+    line-height: 3.8rem;
+    margin-right: 0.9rem;
+
+    font-size: 2rem;
+    font-family: "Open Sans";
+    font-weight: 400;
+  }
+
+  section .h-space td {
+    padding: auto;
     line-height: 3.5rem;
     font-size: large;
   }
@@ -194,5 +225,13 @@
     padding: 0.9rem;
     line-height: 3.5rem;
     font-size: large;
+  }
+  div a[style="color: blue;"] {
+    line-height: 3.8rem;
+    margin-right: 0.9rem;
+
+    font-size: 2rem;
+    font-family: "Open Sans";
+    font-weight: 400;
   }
 }
